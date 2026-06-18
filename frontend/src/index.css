@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-ink: #e8e4dc;
+  --color-ink-muted: #8a8680;
+  --color-ink-faint: #5c5854;
+  --color-surface: #141210;
+  --color-surface-raised: #1c1a17;
+  --color-surface-overlay: #242120;
+  --color-border: #2e2b28;
+  --color-border-bright: #3d3935;
+  --color-accent: #c9a227;
+  --color-accent-dim: #8a7020;
+  --color-teal: #3d9e8f;
+  --color-danger: #c45c4a;
+  --color-warn: #d4a03c;
+  --color-safe: #5a9e6f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gauge-fill {
+  from {
+    stroke-dashoffset: 339.292;
+  }
+}
+
+@keyframes scan-line {
+  0%, 100% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400%); }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.08); opacity: 0.15; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.08s; }
+.animate-fade-up-delay-2 { animation-delay: 0.16s; }
+.animate-fade-up-delay-3 { animation-delay: 0.24s; }
+
+.gauge-arc {
+  animation: gauge-fill 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-bright);
+  border-radius: 3px;
+}
+
+.claim-editor {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.claim-editor::placeholder {
+  color: var(--color-ink-faint);
+}
+
+.claim-editor:focus {
+  outline: none;
+}
+
+.stamp {
+  transform: rotate(-3deg);
+  border: 3px solid currentColor;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
