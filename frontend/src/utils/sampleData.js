@@ -1,5 +1,5 @@
 export const SAMPLE_CLAIM = `CLAIM FORM - CMS 1500
-Patient: John
+Patient: Emily Carter
 DOB: 03/15/1985
 Insurance ID: MCR-2847561
 Provider: Dr. Michael Reed NPI: 1234567890
