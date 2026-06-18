@@ -1,8 +1,8 @@
 export const SAMPLE_CLAIM = `CLAIM FORM - CMS 1500
-Patient: John Smith
+Patient: John
 DOB: 03/15/1985
 Insurance ID: MCR-2847561
-Provider: Dr. Sarah Johnson NPI: 1234567890
+Provider: Dr. Michael Reed NPI: 1234567890
 Date of Service: 03/10/2024
 Date of Service: 03/10/2024
 Diagnosis Code (ICD-10): J06.9 (Upper respiratory infection)

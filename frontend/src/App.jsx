@@ -98,7 +98,7 @@ export default function App() {
             <em className="text-accent">cost you.</em>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-            Paste or upload CMS-1500 forms and EOB reports. AI scans for coding mismatches,
+            Paste or upload CMS-1500 forms and EOB reports. ClaimScope scans for coding mismatches,
             billing anomalies, and common fraud patterns in seconds.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function App() {
       <footer className="relative mt-12 border-t border-border py-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 sm:flex-row sm:px-8">
           <p className="text-xs text-ink-faint">
-            Powered by OpenAI · Educational use only
+            ClaimScope · Educational use only
           </p>
           <p className="font-mono text-[10px] text-ink-faint">
             Not a substitute for professional claims review

@@ -15,7 +15,7 @@ function LoadingState() {
           style={{ animation: 'spin 1s linear infinite' }}
         />
         <div className="absolute inset-5 rounded-full border border-border" />
-        <span className="font-mono text-lg font-medium text-accent">AI</span>
+        <span className="font-mono text-lg font-medium text-accent">CS</span>
       </div>
 
       <p className="font-[family-name:var(--font-display)] text-2xl text-ink">Analyzing claim</p>
